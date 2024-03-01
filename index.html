@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array, oppgave 1</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        
+        const pocketStuff = ['Hat', ' Pencil', ' Dinosaur',' Shower cap', ' Piece of tape.'];
+        updateView()
+
+        function updateView(){
+            document.getElementById('app').innerHTML = /*html*/`
+            <button onclick="seePocket(pocketStuff)">See what's in pocket</button>
+            <div id="listOfStuff"></div>
+            `;
+        }
+
+        function seePocket(){
+        for (let i=0; i < pocketStuff.length; i++){
+        document.getElementById('listOfStuff').innerHTML =
+        `${pocketStuff}`;
+        } 
+        
+        
+        }
+    </script>
+</body>
+</html>
